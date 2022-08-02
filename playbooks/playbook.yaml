@@ -51,4 +51,5 @@
     copy:
       src: /tmp/ansible-blackbox/blackbox_exporter-0.21.1.linux-arm64/blackbox_exporter
       dest: /bin/
+      mode: 755
       
