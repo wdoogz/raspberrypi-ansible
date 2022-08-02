@@ -5,6 +5,7 @@
   - name: install python3
     apt:
       name: python3
+
   - name: add grafana gpg
     apt_key:
       url: https://packages.grafana.com/gpg.key
@@ -14,6 +15,19 @@
   - name: grafana
     apt:
       name: grafana
+
   - name: prometheus
     apt:
       name: prometheus
+
+  - name: enable grafana
+    systemd:
+      enabled: yes
+      name: grafana-server
+      state: started
+
+  - name: enabled prometheus
+    systemd:
+      enabled: yes
+      name: prometheus
+      state: started
