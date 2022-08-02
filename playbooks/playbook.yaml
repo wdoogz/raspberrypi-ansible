@@ -5,6 +5,9 @@
   - name: install python3
     apt:
       name: python3
+  - name: add grafana gpg
+    apt_key:
+      url: https://packages.grafana.com/gpg.key
   - name: grafana
     apt:
       name: grafana
