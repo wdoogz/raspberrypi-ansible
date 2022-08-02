@@ -7,7 +7,7 @@
       name: python3
   - name: grafana
     apt:
-      name: grafana-server
+      name: grafana
   - name: prometheus
     apt:
       name: prometheus
