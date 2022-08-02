@@ -44,5 +44,11 @@
 
   - name: unzip blackbox
     unarchive:
-      dest: /bin/
+      dest: /tmp/ansible-blackbox/
       src: /tmp/ansible-blackbox/blackbox_exporter-0.21.1.linux-arm64.tar.gz
+
+  - name: copy blackbox bin
+    copy:
+      src: /tmp/ansible-blackbox/blackbox_exporter-0.21.1.linux-arm64/blackbox_exporter
+      dest: /bin/
+      
