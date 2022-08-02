@@ -1,3 +1,7 @@
-- name: install python
-  ansible.builtin.apt:
-    name: pyton3
+- name: bootstrap rbpi
+  hosts: localhost
+
+  tasks:
+  - name: install python3
+    apt:
+      name: python3
