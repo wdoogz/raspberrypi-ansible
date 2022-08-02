@@ -1,0 +1,3 @@
+- name: install python
+  ansible.builtin.apt:
+    name: pyton3
