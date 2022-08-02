@@ -5,3 +5,9 @@
   - name: install python3
     apt:
       name: python3
+  - name: grafana
+    apt:
+      name: grafana-server
+  - name: prometheus
+    apt:
+      name: prometheus
