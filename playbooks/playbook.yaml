@@ -8,6 +8,9 @@
   - name: add grafana gpg
     apt_key:
       url: https://packages.grafana.com/gpg.key
+  - name: add grafana repo
+    apt_repository:
+      repo: deb https://packages.grafana.com/oss/deb stable main
   - name: grafana
     apt:
       name: grafana
